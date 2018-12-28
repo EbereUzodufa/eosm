@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<title>Ernest for Eti-Osa</title>
+	<title>Ernest's Manifesto</title>
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="icon" href="image/icon.png">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+	<style type="text/css">
+		ul#manifesto>li{
+			margin: 10px auto;
+			list-style: none;
+			padding: 15px;
+		}
+
+		ul#manifesto>li::before{
+			content: "💎";
+			color: #499EFC;
+			display: inline;
+			width: 1em;
+ 	 		margin-left: -2em;
+ 	 		margin-right: 10px;
+		}
+
+		@media screen and (max-width: 850px){
+			#img__homePage {
+			    height: 400px;
+			    margin: 20px auto;
+			    width: 80%;
+			}
+		}
+	</style>
 </head>
 <body>
 	<div id="navigation">
@@ -82,27 +107,21 @@
 	<main>
 		<article>
 			<img id="img__homePage" alt="Ernest Osezua Oboh s the only credible alternative for results in Eti-Osa"
-			src="image/ernest_adp_400px.jpg"
-			srcset="image/ernest_adp_600px.jpg 600w,
-				image/ernest_adp_800px.jpg 800w,
-				image/ernest_adp.jpg">
+			src="image/icon.png"
+			style="height: auto;">
 			<section class="container">
-				<h1>Join our revolutionary cause</h1>
-				<div class="container">
-					<div id="twoParts">
-						<p id="homePage_text">
-							Ernest Osezua Oboh is running to serve Eti-Osa citizens and to bring our values to Administration, but he can’t do it without your help. Sign up here to join Team Ernest and help collect signatures, make phone calls, and promote our cause. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</p>
-					</div>
-					<div id="twoParts">
-						<form>
-							<input type="text" placeholder="First Name" required>
-							<input type="text" placeholder="Last Name" required>
-							<input type="text" placeholder="Email" required>
-							<input type="text" placeholder="Phone Number" required>
-							<input type="submit" value="Submit">
-						</form>
-					</div>
+				<h1>Ernest Manifesto</h1>
+				<div class="manifesto">
+					<ul id="manifesto">
+						<li>I will campaign to restore full hospital services to the Princess Royal Hospital;</li>
+						<li>I will fight for free parking at the Princess Royal Hospital;</li>
+						<li>I will campaign for better adult care services and the provision of sheltered housing;</li>
+						<li>I will fight to stop the bedroom tax;</li>
+						<li>I will campaign to limit housing development to brown field sites;</li>
+						<li>I will fight to improve the education of our children in Telford;</li>
+						<li>I will encourage businesses to create jobs in Telford;</li>
+						<li>I will be available to listen to your problems and assist you to overcome them.</li>
+					</ul>
 				</div>
 			</section>
 		</article>
@@ -128,18 +147,5 @@
 		<p>Copyright 2018. Ernest for Eti-Osa. All Rights Reserved | Courtesy of Team Ernest</p>
 	</footer>
 </body>
-<!-- 	<script async type="text/javascript">
-		function toogleMenu(){
-			let menu = document.getElementById('mobile-top-menu');
-			menu.toggleAttribute('hidden');
-
-			let btn = $('#btnHamburgar').css("background-color").toString();
-			if(btn === 'rgba(0, 0, 0, 0)'){
-				$('#btnHamburgar').css('background-color','rgb(227, 0, 7,0.8)');
-			}else{
-				$('#btnHamburgar').css('background-color','rgba(0, 0, 0, 0)');
-			}
-		}
-	</script> -->
 	<script type="text/javascript" src="app.js"></script>
 </html>

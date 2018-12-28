@@ -1,5 +1,5 @@
-function(){
-	function toogleMenu(){
+	$('#hamburgar').on('click',function(){
+		event.preventDefault();
 		let menu = document.getElementById('mobile-top-menu');
 		menu.toggleAttribute('hidden');
 
@@ -9,5 +9,4 @@ function(){
 		}else{
 			$('#btnHamburgar').css('background-color','rgba(0, 0, 0, 0)');
 		}
-	}
-}
+	})
