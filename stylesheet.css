@@ -1,9 +1,14 @@
+/*Page colors
+#E30007
+#071545
+#499EFC*/
+
 body{
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 100vw;
 	margin: 0px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16pt;
 }
 
@@ -13,22 +18,35 @@ main, article,footer{
 	flex-wrap: wrap;
 }
 
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Lato', sans-serif;
+}
+
 h1{
-	font-family: 'Roboto', sans-serif;
 	text-transform: uppercase;
 	font-size: 1.5rem;
 	text-align: center;
 	margin: 10px auto;
-	width: 100%;
-	color: #499EFC; /*#071545*/
+	width: 100%; /*#071545*/
+	color: #499EFC;
+}
+
+h2{
+	font-size: 1.2rem;
+	color: #E30007;
+}
+
+h2.voter_subject{
+	margin: 5px;
+	margin-left: -1em;
 }
 
 p#social {
     color: #071545;
+    width: 100%;
 }
 
 p{
-	font-family: 'Lato', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
@@ -37,12 +55,30 @@ p{
 	color: #000000;	
 }
 
-p#homePage_text {
+ul#Voters_Right>li{
+	margin: 10px auto;
+	list-style: none;
+	padding: 15px;
+}
+
+ul#Voters_Right>li::before{
+	content: "■"/*"☆"*/;
+	color: #499EFC;
+	display: inline;
+	width: 1em;
+	margin-left: -2em;
+	margin-right: 10px;
+}
+
+p#aboutPage_text, p#homePage_text {
     padding: 10px;
     line-height: 1.5;
     text-align: justify;
 }
 
+fieldset {
+    border-color: #499EFC;
+}
 
 #sub-menu-item, #menu-item{
     font-family: 'Open Sans';
@@ -60,6 +96,21 @@ p#homePage_text {
 	text-transform: capitalize;
 }
 
+a#volunteer__link, a#reference_Link{
+	width: 100%;
+	margin: 10px auto;
+	/*text-decoration: none;*/
+	text-align: center;
+}
+
+a#volunteer__link{
+	color: #E30007;
+}
+
+a#reference_Link{
+	color: #E30007;
+}
+
 #sub-menu-item:hover, #menu-item:hover{
     border-bottom: 0.5px solid #E30007;
 }
@@ -75,7 +126,7 @@ nav>ul>li{
 	font-size: 1.3rem;
 }
 
-#img__homePage{
+#img__Page{
 	/*height: 500px;*/
 	margin: 20px auto;
 	/*widows: 85%;*/
@@ -109,8 +160,8 @@ footer{
 footer>p{
 	margin: 10px auto;
 	font-family: 'Open Sans', sans-serif;
-	font-style: normal;
-	font-weight: normal;
+	font-style: normal
+;	font-weight: normal;
 	line-height: normal;
 	font-size: 0.75rem;
 	text-align: center;
@@ -140,6 +191,10 @@ i.fa.fa-bars{
 	color: #499EFC;
 }
 
+.container{
+	width: 100%;
+}
+
 #btnHamburgar{
 	width: 50px;
 	height: 50px;
@@ -167,6 +222,12 @@ i.fa.fa-bars{
 p#social{
 	text-align: center;
 	font-weight: bold;
+	color: #499EFC;
+}
+
+div#social {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 section.container{
@@ -175,9 +236,7 @@ section.container{
 }
 
 input{
-	width: 100%;
-	margin: 10px auto;
-	height: 45px;
+	
 }
 
 input[type="text"]{
@@ -187,6 +246,9 @@ input[type="text"]{
 	background: #FFFFFF;
 	border: 1px solid #499EFC;
 	box-sizing: border-box;
+	width: 100%;
+	margin: 10px auto;
+	height: 45px;
 }
 
 input[type="submit"]{
@@ -198,6 +260,9 @@ input[type="submit"]{
 	height: 50px;
 	font-size: 1.5rem;
 	font-family: 'Roboto', sans-serif;
+	width: 100%;
+	margin: 10px auto;
+	height: 45px;
 }
 
 input[type="submit"]:hover{
@@ -278,8 +343,13 @@ ul#top-menu {
 		font-size: 16pt;
 	}
 
-	#img__homePage{
+	#img__Page{
 		height: 500px;
+		margin: 5px auto
+	}
+
+	h2.voter_subject{
+		margin-left: -2em;
 	}
 
 	section{
@@ -292,6 +362,15 @@ ul#top-menu {
 
 	article{
 		background-color: #f5f5f5;
+	}
+	
+	article#Voters_Right{
+		background-color: transparent;
+		margin: 10px auto;
+	}
+
+	.noBackgroundColor{
+		background-color: transparent;
 	}
 
 	h1{font-size: 2rem;}
@@ -310,8 +389,6 @@ ul#top-menu {
 	}
 
 	.img__socialMediaIcons{
-		width: 60px;
-		height: 60px;
 		margin: 6px;
 	}
 
@@ -327,14 +404,22 @@ ul#top-menu {
 	}
 
 	img#logo{
-		width: 150px;
-		height: 150px;
-		margin: 15px auto;
+		width: 100px;
+		height: 100px;
+		/*margin: 15px auto;*/
+		margin-top: 5px;
+		margin-bottom: 0px;	
+	}
+
+	#aboutPage_text{
+		font-size: 1.2rem;
+		margin: 0px;
 	}
 
 	#homePage_text{
+		width: 650px;
 		font-size: 1.2rem;
-		margin: 0px;
+		margin: 0px auto;
 	}
 
 	div#navigation{
@@ -376,10 +461,14 @@ ul#top-menu {
 		margin-right: 0px;3
 		margin-left: 0px;3
 	}
+
 	.img__socialMediaIcons{
-		width: 75px;
-		height: 75px;
 		margin: 10px;
+	}
+
+	article#Voters_Right{
+		width: 750px;
+		margin: 15px auto;
 	}
 }
 
